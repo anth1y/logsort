@@ -5,8 +5,8 @@ File.open("access.log.52", "r") do |logf|
     filetype = url.split('.')[-1]
     next if filetype.include? "/"
       filetype.split("?")[0]
-      counts = Hash.new(0)
+      counts = Hash.new
       suffix = filetype.split("?")[0]
-      p counts[suffix] += 1
+      p counts[suffix]
   end
 end
